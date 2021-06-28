@@ -1,10 +1,11 @@
-﻿@page "/animal-sounds"
+﻿@page "/"
+@page "/animal-sounds"
 @using Injector.Models
 
-@foreach(var animal in Animals)
+@foreach (var animal in Animals)
 {
-    <p>@animal.MakeSound()</p>
-}    
+    <p>@animal.GetType().Name: @animal.MakeSound()</p>
+}
 
 @code {
     [Inject]

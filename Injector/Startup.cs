@@ -1,4 +1,3 @@
-using Injector.Data;
 using Injector.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -21,7 +20,6 @@ namespace Injector
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
             services.AddScoped<IAnimal, Cat>();
             services.AddScoped<IAnimal, Cow>();
             services.AddScoped<IAnimal, Doggy>();
