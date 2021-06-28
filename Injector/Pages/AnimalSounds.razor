@@ -1,0 +1,12 @@
+﻿@page "/animal-sounds"
+@using Injector.Models
+
+@foreach(var animal in Animals)
+{
+    <p>@animal.MakeSound()</p>
+}    
+
+@code {
+    [Inject]
+    protected IEnumerable<IAnimal> Animals { get; set; }
+}
